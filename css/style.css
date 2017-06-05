@@ -11,6 +11,24 @@ header {
   header .input-group {
     margin-top: 1em; }
 
-nav ul li {
-  width: 15em;
-  text-align: center; }
+nav {
+  padding: 1em;
+  color: white;
+  background-color: #292684; }
+  nav ul li.active {
+    color: white !important; }
+    nav ul li.active a:hover {
+      color: white !important; }
+  nav ul li {
+    width: 15em;
+    text-align: center; }
+    nav ul li a {
+      color: white !important; }
+      nav ul li a:hover {
+        color: #337ab7 !important; }
+
+section.slider {
+  margin-top: 2em; }
+
+section.main_section {
+  margin-top: 2em; }

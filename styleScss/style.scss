@@ -1,0 +1,49 @@
+header{
+  margin-top: .3em;
+  margin-bottom: 2em;
+  img{
+    width: 5em;
+    display: inline-block;
+    margin-top: 1em;
+  }
+  h1{
+    display: inline-block;
+    margin-top: .5em;
+  }
+  .input-group{
+    margin-top: 1em;
+  }
+};
+nav{
+  padding: 1em;
+  color: white;
+  background-color: #292684;
+  ul{
+    li.active{
+      color: white !important;
+      a{
+        &:hover{
+          color: white !important;
+        }
+      }
+    }
+    li{
+      width: 15em;
+      text-align: center;
+      a{
+        color: white !important;
+        &:hover{
+          color: #337ab7 !important;
+        }
+      }
+    }
+  }
+};
+section.slider{
+  margin-top: 2em;
+  #carousel-example-generic2{
+  }
+}
+section.main_section{
+  margin-top: 2em;
+}

@@ -1,3 +1,4 @@
+<?php session_start();  ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -35,8 +36,8 @@
             <div class="input-group input-group-sm">
                 <span class="input-group-addon" id="basic-addon1">Login to system</span>
                 <form class="form_header" action="login.php" method="post">
-                  <input type="text" class="form-control"name="login" placeholder="login" aria-describedby="basic-addon1">
-                  <input type="password" class="form-control" name="haslo"oncopy="return false" onpaste="return false" id="pass"placeholder="Password" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control" name="login" placeholder="login" aria-describedby="basic-addon1">
+                  <input type="password" class="form-control" name="password"oncopy="return false" onpaste="return false" id="pass"placeholder="Password" aria-describedby="basic-addon1">
                 </form>
             </div>
           </div>

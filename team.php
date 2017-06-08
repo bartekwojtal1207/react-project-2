@@ -1,3 +1,4 @@
+<?php session_start();  ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -56,5 +57,6 @@
       </div>
     </nav>
     <h1>Twoja druzyna</h1>
+    <?php echo "witaj".$_SESSION['user'] ; ?>
   </body>
 </html>

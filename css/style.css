@@ -10,6 +10,8 @@ header {
     margin-top: .5em; }
   header .input-group {
     margin-top: 1em; }
+    header .input-group #basic-addon1 {
+      cursor: pointer !important; }
 
 nav {
   padding: 1em;
@@ -32,3 +34,15 @@ section.slider {
 
 section.main_section {
   margin-top: 2em; }
+  section.main_section h3 {
+    margin: 2em; }
+  section.main_section ul.list_option {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    section.main_section ul.list_option li.element_option {
+      width: 30%;
+      display: inline-block; }
+      section.main_section ul.list_option li.element_option .thumbnail p {
+        margin: 1em; }

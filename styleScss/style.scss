@@ -12,6 +12,9 @@ header{
   }
   .input-group{
     margin-top: 1em;
+    #basic-addon1{
+      cursor: pointer !important;
+    }
   }
 };
 nav{
@@ -46,4 +49,22 @@ section.slider{
 }
 section.main_section{
   margin-top: 2em;
+  h3{
+    margin: 2em;
+  }
+  ul.list_option{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    li.element_option{
+      width: 30%;
+      display: inline-block;
+      .thumbnail{
+        p{
+          margin: 1em;
+        }
+      }
+    }
+  }
 }

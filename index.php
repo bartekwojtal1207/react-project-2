@@ -13,6 +13,9 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js">
+
+    </script>
   </head>
   <body>
     <header>
@@ -31,9 +34,9 @@
           <div class="col-md-5 col-sm-12 col-xs-12 ">
             <div class="input-group input-group-sm">
                 <span class="input-group-addon" id="basic-addon1">Login to system</span>
-                <form class="form_header" action="index.html" method="post">
-                  <input type="text" class="form-control" placeholder="login" aria-describedby="basic-addon1">
-                  <input type="password" class="form-control" oncopy="return false" onpaste="return false" id="pass"placeholder="Password" aria-describedby="basic-addon1">
+                <form class="form_header" action="login.php" method="post">
+                  <input type="text" class="form-control"name="login" placeholder="login" aria-describedby="basic-addon1">
+                  <input type="password" class="form-control" name="haslo"oncopy="return false" onpaste="return false" id="pass"placeholder="Password" aria-describedby="basic-addon1">
                 </form>
             </div>
           </div>
@@ -47,7 +50,7 @@
             <ul class="nav nav-pills">
               <li role="presentation" class="active"><a href="#">Home</a></li>
               <li role="presentation"><a href="#">Profile</a></li>
-              <li role="presentation"><a href="#">Your Team</a></li>
+              <li role="presentation"><a href="team.php">Your Team</a></li>
               <li role="presentation"><a href="#">Update data</a></li>
             </ul>
           </div>
@@ -91,13 +94,33 @@
     <section class="main_section">
       <div class="container">
         <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <h3>Magage Your TEAM !</h3>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <h3>Manage Your TEAM !</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <ul class="list_option">
+              <li class="element_option"><a href="#"><div class="thumbnail">
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Tactic</a></p>
+              </div></a></li>
+              <li class="element_option"><a href="#"><div class="thumbnail">
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Team statistic</a></p>
+              </div></a></li>
+              <li class="element_option"><a href="#"><div class="thumbnail">
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Personal ranking</a></p>
+              </div></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <?php
 
-            </div>
+            ?>
+          </div>
         </div>
       </div>
-
     </section>
   </body>
 </html>

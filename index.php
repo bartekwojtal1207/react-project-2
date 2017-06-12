@@ -33,12 +33,23 @@
             </h1>
           </div>
           <div class="col-md-5 col-sm-12 col-xs-12 ">
+            <?php if((isset($_SESSION['login_in_system']))&&($_SESSION['login_in_system']==true)){
+              echo 'jestes juz zalogowany';
+              echo $_SESSION['login_in_system'];
+            //  exit();
+            }else{
+              echo "nie nie jestes zalogowany";
+            }?>
             <div class="input-group input-group-sm">
                 <span class="input-group-addon" id="basic-addon1">Login to system</span>
                 <form class="form_header" action="login.php" method="post">
                   <input type="text" class="form-control" name="login" placeholder="login" aria-describedby="basic-addon1">
                   <input type="password" class="form-control" name="password"oncopy="return false" onpaste="return false" id="pass"placeholder="Password" aria-describedby="basic-addon1">
                 </form>
+                <?php if(isset($_SESSION['error_login'])){
+                      echo $_SESSION['error_login'];
+                      };
+                ?>
             </div>
           </div>
         </div>

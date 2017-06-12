@@ -56,7 +56,14 @@
         </div>
       </div>
     </nav>
+
+    <?php if (!isset($_SESSION['login_in_system'])){
+            header("Location:index.php");
+            exit();
+          };
+        ?>
     <h1>Twoja druzyna</h1>
     <?php echo "witaj".$_SESSION['user'] ; ?>
+    <a href="logout.php"><button type="button" name="log_out">wyloguj</button></a>
   </body>
 </html>

@@ -61,7 +61,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <ul class="nav nav-pills">
               <li role="presentation" class="active"><a href="#">Home</a></li>
-              <li role="presentation"><a href="#">Profile</a></li>
+              <li role="presentation"><a href="profile.php">Profile</a></li>
               <li role="presentation"><a href="team.php">Your Team</a></li>
               <li role="presentation"><a href="#">Update data</a></li>
             </ul>
@@ -128,7 +128,9 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <?php
-
+              if (isset($_SESSION['add_new_user'])) {
+                echo "<h1>Witam nowy uzytkowniku</h1>";
+              }
             ?>
           </div>
         </div>

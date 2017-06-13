@@ -48,7 +48,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <ul class="nav nav-pills">
               <li role="presentation"><a href="index.php">Home</a></li>
-              <li role="presentation"><a href="#">Profile</a></li>
+              <li role="presentation"><a href="profile.php">Profile</a></li>
               <li role="presentation"  class="active"><a href="team.php">Your Team</a></li>
               <li role="presentation"><a href="#">Update data</a></li>
             </ul>

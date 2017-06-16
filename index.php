@@ -14,9 +14,8 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/app.js">
-
-    </script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.js"></script>
   </head>
   <body>
     <header>
@@ -120,8 +119,14 @@
                 <p><a class="btn btn-primary btn-lg" href="#" role="button">Team statistic</a></p>
               </div></a></li>
               <li class="element_option"><a href="#"><div class="thumbnail">
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Personal ranking</a></p>
-              </div></a></li>
+                <p><a class="btn btn-primary btn-lg" href="create.php" role="button">Personal ranking</a></p>
+              </div></a>
+              <?php
+               if (isset( $_SESSION['user'])){
+                 echo "ktos jest zalgowany";
+               } ?>
+
+              </li>
             </ul>
           </div>
         </div>
@@ -130,7 +135,9 @@
             <?php
               if (isset($_SESSION['add_new_user'])) {
                 echo "<h1>Witam nowy uzytkowniku</h1>";
-              }
+                unset($_SESSION['add_new_user']);
+
+              };
             ?>
           </div>
         </div>

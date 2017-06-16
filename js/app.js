@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+console.log("sd");
 
   // form login
   var btn_form = $("#basic-addon1");

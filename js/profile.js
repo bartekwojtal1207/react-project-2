@@ -5,8 +5,8 @@ $(document).ready(function(){
 function hide_form(){
   var  newdiv = document.getElementById('main_section');
   $(newdiv).fadeOut(1000);
+  hide_form();
 };
-hide_form();
 var array = [];
 // newdiv.style.display = 'none';
 $.getJSON("newfile.JSON",function(){

@@ -87,8 +87,7 @@
         }
           // obsluga gdy formularz jest wypelniony prawidlowo
         if($registerOk == true){
-          echo "hura dziala";
-
+          echo "dziala";
           if ($connect->query("INSERT INTO user VALUES (NULL, '$nick','$password_hash','$email')")){
             $_SESSION['add_new_user'] = true;
             header("Location:index.php");

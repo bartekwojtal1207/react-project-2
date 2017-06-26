@@ -98,14 +98,15 @@
        ?>
     </div>
     <div class="add_player">
-      <form class="add_player_form" method="post">
-          <input type="text" name="name_player" >
-          <input type="text" name="surname_player" >
-          <input type="number" name="age" >
-          <input type="text" name="country" >
-          <input type="number" name="wzrost" >
-          <input type="number" name="waga" >
-          <input type="submit" name="add_player_button" value="Dodaj Piłkarza do Bazy">
+      <form action="add_player.pHP"class="add_player_form" method="post">
+          imie
+          <input type="text" name="name_player" ><br/>
+          <input type="text" name="surname_player" ><br/>
+          <input type="number" name="age" ><br/>
+          <input type="text" name="country" ><br/>
+          <input type="float" name="wzrost" ><br/>
+          <input type="float" name="waga" ><br/>
+          <input type="submit" name="add_player_button" value="Dodaj Piłkarza do Bazy"><br/>
       </form>
     </div>
 

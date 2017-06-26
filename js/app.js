@@ -9,5 +9,18 @@ $(document).ready(function(){
     $(form_login).submit();
 
   });
+  $.getJSON("newfile.JSON",function(){
+   //JSON.parse($.this);
+    }).done(function(response){
+    // console.log(response)
+    // console.log(array)
+    var pobrane = response.name;
+    console.log(pobrane)
+  //  array.push(pobrane);
+    return pobrane;
 
+  }).fail(function(){
+  //console.log(pobrane)
+      console.log('nie pobrano');
+  });
 });

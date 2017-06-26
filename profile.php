@@ -241,7 +241,7 @@
         <?php
         if((isset($_SESSION['login_in_system']))&&($_SESSION['login_in_system']==true)){
          echo 'jestes juz zalogowany';
-        echo "<script type='text/javascript' src='js/profile.js'> hide_form();</script>";
+        echo "<script type='text/javascript' src='js/profile.js'> </script>";
        }else{
          echo "nie nie jestes zalogowany";
      }?>

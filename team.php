@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/app.js">
@@ -62,8 +62,39 @@
             exit();
           };
         ?>
+        <!-- SPRAWDZAMY CZY KTOS JEST ZALOGOWANY -->
     <h1>Twoja druzyna</h1>
     <?php echo "witaj".$_SESSION['user'] ; ?>
     <a href="logout.php"><button type="button" name="log_out">wyloguj</button></a>
+    <br><br>
+    <div class="team_list">
+      <?php
+
+      require_once 'connect.php';
+      $connect = @new mysqli($host,$db_user,$db_password, $db_name);
+      if($connect->connect_errno!=0){
+        echo "nie dziala ";
+      }else{
+        echo "dziala ";
+        if($result_team_list  = $connect->query("SELECT * FROM `player/lech` ")){
+          $count_player_list = $result_team_list->num_rows;// liczba wierszy z pasujacym
+            if($count_player_list > 0){
+              $row  = $result_team_list->fetch_assoc(); // wlozenie danych do tablicy asocjacyjnej
+              echo "brak bledu";
+              $lechname = $row['Nazwisko'];
+              echo "<ul><li>$lechname</li></ul>";
+              $result_team_list->close();// !!!!! usuwanie z pamieci rekordow z bazy !!!
+              }else{
+                echo 'blad0001';
+              }
+          }else{
+            echo 'blad0002';
+          }
+          $connect->close();
+      };
+
+       ?>
+    </div>
+
   </body>
 </html>

@@ -5,9 +5,9 @@ $(document).ready(function(){
 function hide_form(){
   var  newdiv = document.getElementById('main_section');
   $(newdiv).fadeOut(1000);
-  hide_form();
 };
-var array = [];
+// var array = [];
+hide_form();
 // newdiv.style.display = 'none';
 $.getJSON("newfile.JSON",function(){
  //JSON.parse($.this);
@@ -16,7 +16,7 @@ $.getJSON("newfile.JSON",function(){
   // console.log(array)
   var pobrane = response.name;
   console.log(pobrane)
-  array.push(pobrane);
+//  array.push(pobrane);
   return pobrane;
 
 }).fail(function(){

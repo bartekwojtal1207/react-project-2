@@ -1,9 +1,15 @@
 // var React = require('react');
 // var ReactDOM = require('react-dom');
 console.log('sad')
+
+// var jsonfile = require('../newfile.JSON');
+// console.log(jsonfile);
+
+
 var newDiv = (
   <div>
-    <h1>Witam w react</h1>
+    <h1 className="foo">Witam w react</h1>
+    <p>wybierz jedną z dostępnych opcji</p>
   </div>
 );
 

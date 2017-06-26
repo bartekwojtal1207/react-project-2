@@ -82,7 +82,9 @@
               $row  = $result_team_list->fetch_assoc(); // wlozenie danych do tablicy asocjacyjnej
               echo "brak bledu";
               $lechname = $row['Nazwisko'];
-              echo "<ul><li>$lechname</li></ul>";
+              $lechposition = $row['Pozycja'];
+              $lechid = $row['id'];
+              echo "<ul><li>$lechid $lechname  $lechposition</li></ul>";
               $result_team_list->close();// !!!!! usuwanie z pamieci rekordow z bazy !!!
               }else{
                 echo 'blad0001';
@@ -94,6 +96,17 @@
       };
 
        ?>
+    </div>
+    <div class="add_player">
+      <form class="add_player_form" method="post">
+          <input type="text" name="name_player" >
+          <input type="text" name="surname_player" >
+          <input type="number" name="age" >
+          <input type="text" name="country" >
+          <input type="number" name="wzrost" >
+          <input type="number" name="waga" >
+          <input type="submit" name="add_player_button" value="Dodaj Piłkarza do Bazy">
+      </form>
     </div>
 
   </body>

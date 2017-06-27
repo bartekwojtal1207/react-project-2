@@ -23,7 +23,7 @@
             echo "<br/>";
             if( $connect->query("INSERT INTO player VALUES(NULL,'$surname_player','$name_player','$country','$age_player',
               '$formation','$position','$betterfoot','$wzrost','$waga')")){
-              echo "DODANO GRACZA !!";// w zapytraniu blad !!!!
+              echo "DODANO GRACZA !!";
             }else{
               echo $connect->connect_errno;
               echo "<br/>";

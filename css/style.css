@@ -46,3 +46,7 @@ section.main_section {
       display: inline-block; }
       section.main_section ul.list_option li.element_option .thumbnail p {
         margin: 1em; }
+
+section.main_team_section #test_div .form-group {
+  display: flex;
+  flex-direction: column; }

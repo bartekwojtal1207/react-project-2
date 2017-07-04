@@ -16,8 +16,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.js"></script>
-    <script type="text/javascript" src="js/app.js">  </script>
     <script type="text/babel" src="js/formAddPlayer.jsx"></script>
+    <script type="text/javascript" src="js/app.js">  </script>
   </head>
   <body>
     <header>
@@ -120,29 +120,6 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <div class="add_player" >
-              <form action="add_player.php"class="add_player_form" method="post">
-                <label for="name_player">Imie : </label>
-                  <input type="text" name="name_player" ><br/>
-                <label for="surname_player">Nazwisko :</label>
-                  <input type="text" name="surname_player" ><br/>
-                      wiek
-                      <input type="date" name="age" ><br/>
-                      kraj
-                      <input type="text" name="country" ><br/>
-                      formacja
-                      <input type="text" name="formation"><br/>
-                      Pozycja
-                      <input type="text" name="position"><br/>
-                      lepsza noga
-                      <input type="checkbox" name="betterfoot" value="prawa"><input type="checkbox" name="betterfoot" value="lewa">
-                      wzrost
-                      <input type="float" name="wzrost" ><br/>
-                      waga
-                      <input type="float" name="waga" ><br/>
-                      <input type="submit" name="add_player_button" value="Dodaj Piłkarza do Bazy"><br/>
-                  </form>
-                </div>
                 <div id="test_div">
 
                 </div>

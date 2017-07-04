@@ -4,24 +4,24 @@
          header("Location:index.php");
          exit();
        };
-        $surname_player = $_POST['surname_player'];
         $name_player = $_POST['name_player'];
+        $surname_player = $_POST['surname_player'];
         $age_player = $_POST['age'];
         $country = $_POST['country'];
         $formation = $_POST['formation'];
         $position = $_POST['position'];
-        $wzrost = $_POST['wzrost'];
+        $wzrost = $_POST['height_input'];
         $betterfoot = $_POST['betterfoot'];
-        $waga = $_POST['waga'];
+        $waga = $_POST['weight_input'];
         require_once 'connect.php';
         $connect = new mysqli($host,$db_user,$db_password, $db_name);
         if($connect->connect_errno!=0){
           echo "nie dziala ";
         }else{
           echo "dziala";
-            echo $surname_player."".$name_player."". $country."".$wzrost."".$waga."".$betterfoot;
+            echo $name_player."".$surname_player."". $country."".$wzrost."".$waga."".$betterfoot;
             echo "<br/>";
-            if( $connect->query("INSERT INTO player VALUES(NULL,'$surname_player','$name_player','$country','$age_player',
+            if( $connect->query("INSERT INTO player VALUES(NULL,'$name_player','$surname_player','$country','$age_player',
               '$formation','$position','$betterfoot','$wzrost','$waga')")){
               echo "DODANO GRACZA !!";
             }else{

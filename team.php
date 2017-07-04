@@ -78,6 +78,9 @@
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12 col-xs-12">
+          <form class="" action="create.php" method="post">
+            <input type="submit" name="show_data" value="pokaz">
+          </form>
             <div class="team_list">
               <?php
               require_once 'connect.php';
@@ -88,25 +91,13 @@
                 if($result_team_list  = $connect->query("SELECT * FROM `player` ")){
                     $count_player_list = $result_team_list->num_rows;// liczba wierszy z pasujacym
                     if($count_player_list > 0){
-                      // wlozenie danych do tablicy asocjacyjnej
-                    //  echo $count_player_list;
-                      // $player_name = $row['Nazwisko'];
-                      // $player_id = $row['id'];
                       for ($i=1; $i <= $count_player_list ; $i++) {
                         $row  = $result_team_list->fetch_assoc();
                         $player_name = $row['Nazwisko'];
-
                         $player_position = $row['Pozycja'];
-
-                        //echo "<ul><li>$player_id $player_name   $player_position</li></ul>";
-
                         echo "<td >$player_name</td>";
                         echo "<br/>";
                       }
-                      for ($i=0; $i < $count_player_list-1 ; $i++) {
-                        # code...
-                      }
-
                       $result_team_list->close();// !!!!! usuwanie z pamieci rekordow z bazy !!!
                       }else{
                         echo 'brak znalezien w bazie #+++000';

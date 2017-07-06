@@ -3,7 +3,7 @@ session_start();
 
 require_once 'connect.php';
 
-$myfile = fopen("table-player.JSON", "w") or die("Unable to open file!");
+$myfile = fopen("data/table_player.json", "w") or die("Unable to open file!");
 
 $connect = @new mysqli($host,$db_user,$db_password, $db_name);
 

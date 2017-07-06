@@ -119,6 +119,13 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div  id="list_player_div">
+
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -126,7 +133,7 @@
 
     <a href="logout.php"><button type="button" name="log_out">wyloguj</button></a>
     <br><br>
-    <script type="text/javascript" src="dist/app.js">
+    <script type="text/javascript" src="dist/create_table.js">
 
     </script>
 

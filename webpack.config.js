@@ -9,7 +9,7 @@ module.exports = {
   ],
 
   output: {
-    filename: 'app.js',
+    filename: 'create_table.js',
     path: __dirname + '/dist',
   },
 

@@ -27,6 +27,9 @@ if($connect->connect_errno!=0){
           $player_age[$i] = $row['Wiek'];
           $player_formation[$i] = $row['Formacja'];
           $player_position[$i] = $row['Pozycja'];
+          $player_betterleg[$i] = $row['Lepsza noga'];
+          $player_height[$i] = $row['Wzrost'];
+          $player_weight[$i] = $row['Waga'];
 
           // @$myPlayerObj->player_id = $player_id;
           @$myPlayerObj->player_id = $player_name;
@@ -35,6 +38,9 @@ if($connect->connect_errno!=0){
           @$myPlayerObj->player_country = $player_country;
           @$myPlayerObj->player_formation = $player_formation;
           @$myPlayerObj->player_position = $player_position;
+          @$myPlayerObj->player_betterleg = $player_betterleg;
+          @$myPlayerObj->player_height = $player_height;
+          @$myPlayerObj->player_weight = $player_weight;
           }
 
         $result_team_list->close();// !!!!! usuwanie z pamieci rekordow z bazy !!!

@@ -1,4 +1,11 @@
 <?php session_start();  ?>
+<?php if (!isset($_SESSION['login_in_system'])){
+        header("Location:index.php");
+        exit();
+      };
+      echo  "<h3>Witaj"." ".$_SESSION['user']." ! "."</h3>" ;
+    ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,6 +25,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.js"></script>
     <script type="text/babel" src="js/formAddPlayer.jsx"></script>
     <script type="text/javascript" src="js/app.js">  </script>
+    <!-- <script type="text/javascript" src="dist/app.js"></script> -->
   </head>
   <body>
     <header>
@@ -63,12 +71,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
-            <?php if (!isset($_SESSION['login_in_system'])){
-                    header("Location:index.php");
-                    exit();
-                  };
-                  echo  "<h3>Witaj"." ".$_SESSION['user']." ! "."</h3>" ;
-                ?>
+
           </div>
         </div>
         <div class="row">
@@ -109,12 +112,11 @@
               };
                ?>
             </div>
+
           </div>
           <div class="col-md-6 col-sm-12 col-xs-12">
-                <div id="test_div">
-
-                </div>
-
+            <div id="test_div">
+            </div>
           </div>
         </div>
       </div>
@@ -124,7 +126,9 @@
 
     <a href="logout.php"><button type="button" name="log_out">wyloguj</button></a>
     <br><br>
+    <script type="text/javascript" src="dist/app.js">
 
+    </script>
 
   </body>
 </html>

@@ -19,8 +19,6 @@
           echo "nie dziala ";
         }else{
           echo "dziala";
-            echo $name_player."".$surname_player."". $country."".$wzrost."".$waga."".$betterfoot;
-            echo "<br/>";
             if( $connect->query("INSERT INTO player VALUES(NULL,'$name_player','$surname_player','$country','$age_player',
               '$formation','$position','$betterfoot','$wzrost','$waga')")){
               echo "DODANO GRACZA !!";
@@ -31,5 +29,6 @@
           }
 
           $connect->close();
+          header("Location:team.php");
         };
  ?>

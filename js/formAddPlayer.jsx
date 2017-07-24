@@ -1,14 +1,12 @@
 // var React = require('react');
-// var ReactDOM = require('react-dom');
-
-
-
-
+// // var ReactDOM = require('react-dom');
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+console.log('plik jsx');
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
     };
     // this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,13 +16,11 @@ class NameForm extends React.Component {
      const target = event.target;
      const value = target.type === 'checkbox' ? target.checked : target.value;
      const name = target.name;
-
      this.setState({
         [name]: value,
       //  value: event.target.value
-     });
+     })
    }
-
   handleChange(event) {
     this.setState({value: event.target.value});
     alert('A name was submitted: ' + this.state.value);

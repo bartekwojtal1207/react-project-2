@@ -23,9 +23,10 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.js"></script>
-    <script type="text/babel" src="js/formAddPlayer.jsx"></script>
+    <!-- <script type="text/babel" src="js/formAddPlayer.jsx"></script> -->
     <script type="text/javascript" src="js/app.js">  </script>
-    <!-- <script type="text/javascript" src="dist/app.js"></script> -->
+
+    <!-- <script type="text/javascript" src="dist/create_table.js"></script> -->
   </head>
   <body>
     <header>
@@ -122,7 +123,6 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div  id="list_player_div">
-
             </div>
           </div>
         </div>
@@ -136,6 +136,8 @@
     <script type="text/javascript" src="dist/create_table.js">
 
     </script>
+    <script type="text/javascript" src="dist/app.js">
 
+    </script>
   </body>
 </html>

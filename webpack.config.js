@@ -5,11 +5,11 @@ module.exports = {
     // Set up an ES6-ish environment
     'babel-polyfill',
     // Add your application's scripts below
-    './create_table.jsx',
+    './formAddPlayer.jsx',
   ],
 
   output: {
-    filename: 'create_table.js',
+    filename: 'app.js',
     path: __dirname + '/dist',
   },
 
@@ -22,7 +22,7 @@ module.exports = {
         exclude: /node_modules/,
 
         // Only run `.js` and `.jsx` files through Babel
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
 
         // Options to configure babel with
         query: {

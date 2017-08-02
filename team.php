@@ -24,7 +24,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.js"></script>
     <!-- <script type="text/babel" src="js/formAddPlayer.jsx"></script> -->
-    <script data-main="scripts/main" src="js/require.js"></script>
+    <!-- <script data-main="scripts/main" src="js/require.js"></script> -->
     <script type="text/javascript" src="js/app.js">  </script>
     <!-- <script type="text/javascript" src="js/table_player.json">  </script> -->
 
@@ -136,6 +136,7 @@
     <a href="logout.php"><button type="button" name="log_out">wyloguj</button></a>
     <br><br>
     <script type="text/javascript" src="dist/app.js"></script>
+    <script type="text/babel" src="js/table_player.json"></script>
     <script type="text/babel" src="js/list_player.jsx"></script>
   </body>
 </html>

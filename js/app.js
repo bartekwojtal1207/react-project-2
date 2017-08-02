@@ -5,8 +5,8 @@ $(document).ready(function(){
 
   var form_login = $(".form_header");
 
-  btn_form.on("click",function(){
+  btn_form.on("click", function(e){
 
     $(form_login).submit();
 
-  })
+  });

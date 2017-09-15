@@ -2,7 +2,7 @@
 class AcceptFormLabel extends  React.Component{
 
   constructor(props) {
-     super(props)
+     super(props);
      this.state = {
       colorLabel: "red"
      };
@@ -37,7 +37,7 @@ class AcceptFormLabel extends  React.Component{
 
 class App extends  React.Component{
   constructor(props) {
-     super(props)
+     super(props);
      this.state = {
        value: 'Please write an essay about your favorite DOM element.',
        right: false,

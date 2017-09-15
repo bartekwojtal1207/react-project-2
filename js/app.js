@@ -1,12 +1,13 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
-  // form login
-  var btn_form = $("#basic-addon1");
+    // form login
+    var btn_form = $("#basic-addon1");
 
-  var form_login = $(".form_header");
+    var form_login = $(".form_header");
 
-  btn_form.on("click", function(e){
+    btn_form.on("click", function (e) {
 
-    $(form_login).submit();
+        $(form_login).submit();
 
-  });
+    })
+});

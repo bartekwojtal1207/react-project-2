@@ -50,3 +50,6 @@ section.main_section {
 section.main_team_section #test_div .form-group {
   display: flex;
   flex-direction: column; }
+
+.slick-arrow {
+  background-color: #337ab7; }

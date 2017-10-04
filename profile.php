@@ -3,6 +3,9 @@
   session_start();
 
 
+
+
+
   if(isset($_POST['email'])){ // sprawdzamy czy ktos kliknal button w rejstracji
 
     $registerOk = true;
@@ -88,10 +91,10 @@
           // obsluga gdy formularz jest wypelniony prawidlowo
         if($registerOk == true){
           echo "dziala";
-          if ($connect->query("INSERT INTO user VALUES (NULL, '$nick','$password_hash','$email')")){
+          if ($connect->query("INSERT INTO user VALUES (NULL, '$nick','$password_hash','$email')")) {
             $_SESSION['add_new_user'] = true;
             header("Location:index.php");
-          }else{
+          }else {
           echo $connect->connect_errno;
           }
         }
@@ -111,70 +114,42 @@
     <meta name="viewport" content="initial-scale=1, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>FIFA manager PRO - profile</title>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+
+
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script> <!-- captcha  human or robot-->
+
+
+
+      <script type="text/javascript" src="js/app.js"></script>
+
+      <script type="text/babel" src="js/form-add-data-user.jsx"></script>
+
+
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-1 col-sm-2 col-xs-12">
-            <div class="media media-middle">
-              <a href="#"><img src="img/logo.jpg" alt="logo image" class="img-responsive"></a>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-10 col-xs-12">
-            <h1>Your Game
-              <small class="align-bottom"> is a simply !</small>
-            </h1>
-          </div>
-          <div class="col-md-5 col-sm-12 col-xs-12 ">
-            <?php if((isset($_SESSION['login_in_system']))&&($_SESSION['login_in_system']==true)){
-              echo 'jestes juz zalogowany';
-              echo $_SESSION['login_in_system'];
-            //  exit();
-            }else{
-              echo "nie nie jestes zalogowany";
-            }?>
-            <div class="input-group input-group-sm">
-                <span class="input-group-addon" id="basic-addon1">Login to system</span>
-                <form class="form_header" action="login.php" method="post">
-                  <input type="text" class="form-control" name="login" placeholder="login" aria-describedby="basic-addon1">
-                  <input type="password" class="form-control" name="password"oncopy="return false" onpaste="return false" id="pass"placeholder="Password" aria-describedby="basic-addon1">
-                </form>
-                <?php if(isset($_SESSION['error_login'])){
-                      echo $_SESSION['error_login'];
-                      };
-                ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <nav>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <ul class="nav nav-pills">
-              <li role="presentation" ><a href="index.php">Home</a></li>
-              <li role="presentation"class="active"><a href="#">Profile</a></li>
-              <li role="presentation"><a href="team.php">Your Team</a></li>
-              <li role="presentation"><a href="#">Update data</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+
+    <?php
+    include_once 'components/header.php'
+    ?>
+    <?php
+    include_once 'components/navigation-top.php'
+    ?>
+
     <section class="register_section" id="main_section">
       <div class="container">
         <div class="row" style="margin-top:50px;">
@@ -185,7 +160,8 @@
                 <input type="text" class="form-control"  name="nick" id="inputNickname" placeholder="Podaj login">
               </div>
               <?php
-              if(isset($_SESSION['e_nick'])){
+              if(isset($_SESSION['e_nick'])) {
+                  // jezeli jest ustawiony error_nick wypisz wiadomosc, odnosi  sie do innych inputow
                 echo $_SESSION['e_nick'];
                 unset($_SESSION['e_nick']);
               };
@@ -209,7 +185,6 @@
                 <input type="email" class="form-control" name="email" id="inputEmail1" placeholder="Email">
               </div>
               <?php
-
                 if(isset($_SESSION['e_email'])){
                   echo $_SESSION['e_email'];
                   unset($_SESSION['e_email']);
@@ -227,23 +202,55 @@
               };
               ?>
               <div class="g-recaptcha" data-sitekey="6Lc8SCUUAAAAAPmoBA28rsReE6KOZGGfyo7FjZat"></div>
-              <?php
-              if(isset($_SESSION['e_captcha'])){
-                echo $_SESSION['e_captcha'];
-                unset($_SESSION['e_captcha']);
-              };
-              ?>
+                <?php
+                  if(isset($_SESSION['e_captcha'])){
+                    echo $_SESSION['e_captcha'];
+                    unset($_SESSION['e_captcha']);
+                  };
+                ?>
+
               <button type="submit" style="margin-top:10px;" class="btn btn-default register-btn">Register</button>
             </form>
           </div>
         </div>
+
         <?php
         if((isset($_SESSION['login_in_system']))&&($_SESSION['login_in_system']==true)){
          echo 'jestes juz zalogowany';
-        echo "<script type='text/javascript' src='js/profile.js'> </script>";
-       }else{
-         echo "nie nie jestes zalogowany";
-     }?>
+         echo "<script type='text/javascript' src='js/profile.js'> </script>";
+         echo "<script type='text/babel' src='js/react-profile.jsx'> </script>";
+        }else{
+         echo " nie nie nie jestes zalogowany";
+        }?>
+
+
     </section>
+    <section class="profile_show_message">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div id="profile-app">'
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <section>
+      <?php
+      if((isset($_SESSION['login_in_system']))&&($_SESSION['login_in_system']==true)) {
+//          header('Location: get-user.php');
+          include_once('get-user.php');
+      }else{
+          echo' co jest kurwa';
+      }
+      ?>
+
+
+  </section>
+
+
+
+
   </body>
 </html>

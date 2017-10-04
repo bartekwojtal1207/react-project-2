@@ -31,45 +31,14 @@
     <!-- <script type="text/javascript" src="dist/create_table.js"></script> -->
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-1 col-sm-2 col-xs-12">
-            <div class="media media-middle">
-              <a href="#"><img src="img/logo.jpg" alt="logo image" class="img-responsive"></a>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-10 col-xs-12">
-            <h1>Your Game
-              <small class="align-bottom"> is a simply !</small>
-            </h1>
-          </div>
-          <div class="col-md-5 col-sm-12 col-xs-12 ">
-            <div class="input-group input-group-sm">
-                <span class="input-group-addon" id="basic-addon1">Login to system</span>
-                <form class="form_header" action="login.php" method="post">
-                  <input type="text" class="form-control" name="login" placeholder="login" aria-describedby="basic-addon1">
-                  <input type="password" class="form-control"name="haslo" oncopy="return false" onpaste="return false" id="pass"placeholder="Password" aria-describedby="basic-addon1">
-                </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <nav>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <ul class="nav nav-pills">
-              <li role="presentation"><a href="index.php">Home</a></li>
-              <li role="presentation"><a href="profile.php">Profile</a></li>
-              <li role="presentation"  class="active"><a href="team.php">Your Team</a></li>
-              <li role="presentation"><a href="#">Update data</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+
+  <?php
+    include_once 'components/header.php'
+  ?>
+  <?php
+  include_once 'components/navigation-top.php'
+  ?>
+
     <section class="main_team_section">
       <div class="container">
         <div class="row">

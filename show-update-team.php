@@ -32,13 +32,20 @@ echo "witaj ".$_SESSION['user']." !";
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.js"></script>
 <!--    <script type="text/javascript" src="js/app.js"></script>-->
+
 <!--    <script type="text/babel" src="js/react.jsx"></script>-->
 <!--    <script type="text/babel" src="js/react-update.jsx"></script>-->
 </head>
 <body>
 
-<input value='ustaw aktywny club : .$player_name[$i]' type='submit'/>"
+<!--<input value='ustaw aktywny club : .$player_name[$i]' type='submit'/>"-->
+<section class="showClubPage">
+    <div class="container">
+        <div id="showClubs">
 
+        </div>
+    </div>
+</section>
 
 <?php
 require_once 'connect.php';
@@ -61,27 +68,20 @@ if($connect->connect_errno!=0) {
            $player_name[$i] = $row_from_club['Name-team'];
            $active_team[$i] = $row_from_club['active_team'];
 
-            $buttonAktivClub[$i] = "<input value='ustaw aktywny club : .$player_name[$i]' type='submit'/>";
+            $buttonAktivClub[$i] = "<input value='$i' data-id='$i' type='submit' class='newKlasa'/>";
 
-                echo $player_name[$i]." ".$buttonAktivClub[$i]."<br/>".$active_team[$i]."<br/>";
+                echo "<div class='panel-club'>"."<p>$player_name[$i]</p>".$buttonAktivClub[$i]."<br/>".$active_team[$i]."</div>";
+
+
        }
 
    }
 
-
-
-
-
-
 }
 $connect->close();
 ?>
-<script type="text/javascript">
 
-//var xxx = $_SESSION['count_club_list'];
-//console.log(xxx);
-
-</script>
+<script type="text/babel" src="js/show_update_club.jsx"> </script>
 </body>
 </html>
 

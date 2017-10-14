@@ -1,9 +1,8 @@
 <?php
   session_start();
-  if (!isset($_SESSION['login_in_system'])){
-         header("Location:index.php");
-         exit();
-       };
+  require_once 'check-login.php';
+
+
         $name_player = $_POST['name_player'];
         $surname_player = $_POST['surname_player'];
         $age_player = $_POST['age'];

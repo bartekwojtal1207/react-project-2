@@ -1,9 +1,7 @@
-<?php session_start();  ?>
-<?php if (!isset($_SESSION['login_in_system'])){
-        header("Location:index.php");
-        exit();
-      };
-      echo  "<h3>Witaj"." ".$_SESSION['user']." ! "."</h3>" ;
+<?php
+    session_start();
+    require_once 'check-login.php';
+    echo  "<h3>Witaj"." ".$_SESSION['user']." ! "."</h3>" ;
     ?>
 
 <!DOCTYPE html>

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // form login
+    // form login at the top
     var btn_form = $("#basic-addon1");
 
     var form_login = $(".form_header");

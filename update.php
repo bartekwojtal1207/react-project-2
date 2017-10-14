@@ -7,10 +7,7 @@
  */
 
 session_start();
-if (!isset($_SESSION['login_in_system'])){
-    header("Location:index.php");
-    exit();
-}
+require_once 'check-login.php';
     echo "witaj ".$_SESSION['user']." !";
 ?>
 <!DOCTYPE html>

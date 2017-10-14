@@ -13,18 +13,16 @@ try {
         echo ' nawiazano połaczenie z baza danych w pliku get user';
 
 
-        $result_get_user_db  = $connect->query("SELECT login FROM user");
+        $result_get_user_db  = $connect->query("SELECT * FROM informationuser");
+//        echo $result_get_user_db;
         $count_user_db = $result_get_user_db->num_rows;
 
-        if ($count_user_db > 0) {
-           echo ' znaleziono uzytkownika/ow';
 
-            for ($i=1; $i <= $count_user_db ; $i++) {
-                $row  = $result_get_user_db->fetch_assoc();
-                $login_user = $row['login'];
-                echo "<td>$login_user</td>";
-                echo "<br/>";
-            }
+        if ($count_user_db > 5) {
+           echo ' znaleziono uzytkownika/ow';
+        }else {
+            echo "<script type='text/babel' src='js/form-add-data-user.jsx'></script>";
+            echo "ssss222";
         }
     }
     $connect->close();

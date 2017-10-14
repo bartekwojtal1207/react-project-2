@@ -9,7 +9,7 @@
 <?php
 
 require_once 'connect.php';
-
+require_once 'check-login.php';
 $connect = @new mysqli($host,$db_user,$db_password, $db_name);
 
 

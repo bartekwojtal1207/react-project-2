@@ -137,7 +137,7 @@
 
       <script type="text/javascript" src="js/app.js"></script>
 
-      <script type="text/babel" src="js/form-add-data-user.jsx"></script>
+<!--      <script type="text/babel" src="js/form-add-data-user.jsx"></script>-->
 
 
   </head>
@@ -147,7 +147,8 @@
     include_once 'components/header.php'
     ?>
     <?php
-    include_once 'components/navigation-top.php'
+    include_once 'components/navigation-top.php';
+    echo (phpversion());
     ?>
 
     <section class="register_section" id="main_section">
